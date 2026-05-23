@@ -183,11 +183,6 @@
             document.addEventListener('mousemove', (e) => {
                 cursorX = e.clientX;
                 cursorY = e.clientY;
-                cursor.classList.add('visible');
-            });
-
-            document.addEventListener('mouseleave', () => {
-                cursor.classList.remove('visible');
             });
 
             function updateCursor() {
@@ -205,12 +200,15 @@
                 el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
             });
 
-            // Hide cursor over map (iframe captures mouse events)
-            const mapWrapper = document.querySelector('.map-wrapper');
-            if (mapWrapper) {
-                mapWrapper.addEventListener('mouseenter', () => cursor.classList.remove('visible'));
-                mapWrapper.addEventListener('mouseleave', () => cursor.classList.add('visible'));
-            }
+            // Hide cursor when mouse enters iframe (mousemove stops firing)
+            let cursorTimeout;
+            document.addEventListener('mousemove', () => {
+                cursor.classList.add('visible');
+                clearTimeout(cursorTimeout);
+                cursorTimeout = setTimeout(() => {
+                    cursor.classList.remove('visible');
+                }, 120);
+            });
 
             // ─── CONTACT FORM MODAL ───
             const contactModal = document.getElementById('contactModal');
