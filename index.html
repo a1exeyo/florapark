@@ -731,6 +731,32 @@
             contactBackdrop.addEventListener('click', closeContactModal);
             contactCloseBtn.addEventListener('click', closeContactModal);
 
+            const TG_TOKEN = '8680421460:AAHtlVnYHcDXg340tC4BwwwfvpQQuqASMGg';
+            const TG_CHAT = '471574431';
+
+            async function sendToTelegram(data) {
+                const lines = ['📩 *Новая заявка с сайта*', ''];
+                if (data.name)    lines.push(`👤 *Имя:* ${data.name}`);
+                if (data.phone)   lines.push(`📞 *Телефон:* ${data.phone}`);
+                if (data.email)   lines.push(`✉️ *Email:* ${data.email}`);
+                if (data.area)    lines.push(`📐 *Площадь:* ${data.area}`);
+                if (data.service) lines.push(`🔧 *Услуга:* ${data.service}`);
+                if (data.address) lines.push(`📍 *Адрес:* ${data.address}`);
+                if (data.message) lines.push(`\n💬 *Сообщение:*\n${data.message}`);
+                lines.push(`\n🏷 *Источник:* ${data.source === 'promo' ? 'Страница акции' : 'Главная страница'}`);
+
+                const res = await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        chat_id: TG_CHAT,
+                        text: lines.join('\n'),
+                        parse_mode: 'Markdown'
+                    })
+                });
+                return res.ok;
+            }
+
             contactForm.addEventListener('submit', async (e) => {
                 e.preventDefault();
                 const data = Object.fromEntries(new FormData(contactForm));
@@ -738,18 +764,14 @@
                 formStatus.textContent = 'Отправка...';
                 formStatus.className = 'form-status sending';
                 try {
-                    const res = await fetch('/api/submit', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(data)
-                    });
-                    if (res.ok) {
+                    const ok = await sendToTelegram(data);
+                    if (ok) {
                         formStatus.textContent = 'Заявка отправлена! Мы свяжемся с вами в ближайшее время.';
                         formStatus.className = 'form-status success';
                         contactForm.reset();
                         setTimeout(closeContactModal, 2500);
                     } else {
-                        throw new Error('Server error');
+                        throw new Error('Telegram error');
                     }
                 } catch (err) {
                     formStatus.textContent = 'Ошибка отправки. Попробуйте позже.';
