@@ -73,6 +73,19 @@ body {
     color: var(--green);
 }
 
+.nav-logo-img {
+    height: 40px;
+    width: auto;
+    display: block;
+    filter: brightness(0) invert(1);
+    transition: filter 0.4s;
+}
+
+.nav.scrolled .nav-logo-img,
+.nav.nav--solid .nav-logo-img {
+    filter: none;
+}
+
 .nav-links {
     display: flex;
     gap: 2.5rem;
@@ -810,6 +823,12 @@ body {
     font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 1rem;
+}
+
+.footer-logo {
+    height: 50px;
+    width: auto;
+    filter: brightness(0) invert(1);
 }
 
 .footer-brand-text {
@@ -1566,6 +1585,12 @@ body {
     opacity: 0;
     transform: translateY(10px);
     animation: loaderFade 0.6s 0.2s forwards;
+}
+
+.loader-logo {
+    height: 60px;
+    width: auto;
+    filter: brightness(0) invert(1);
 }
 
 @keyframes loaderFade {
