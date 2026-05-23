@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FloraPark — Ландшафтный дизайн и благоустройство</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- LOADER -->
+    <div class="page-loader" id="loader">
+        <div class="loader-text">FloraPark</div>
+    </div>
+
+    <!-- CURSOR -->
+    <div class="cursor-follower" id="cursor"></div>
+
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+        <a href="#" class="nav-logo">FloraPark</a>
+        <ul class="nav-links">
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#portfolio">Проекты</a></li>
+            <li><a href="#contact">Контакт</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <video class="hero-video" id="heroVideo" autoplay muted playsinline>
+            <source src="hf_20260502_134257_def7bd34-78b7-4537-81c4-fd2f0a44be31.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-tagline">Ландшафтный дизайн и благоустройство</p>
+            <h1 class="hero-title">
+                <span class="line"><span class="line-inner">Создаём сады,</span></span>
+                <span class="line"><span class="line-inner">в которые</span></span>
+                <span class="line"><span class="line-inner">возвращаются</span></span>
+            </h1>
+            <p class="hero-subtitle">Проектируем и воплощаем пространства, где природа и архитектура существуют в гармонии</p>
+            <a href="#contact" class="hero-cta">
+                <span>Обсудить проект</span>
+                <span class="arrow">&rarr;</span>
+            </a>
+        </div>
+        <div class="hero-scroll" id="heroScroll">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee">
+        <div class="marquee-track">
+            <span class="marquee-item">Ландшафтный дизайн <span class="dot"></span></span>
+            <span class="marquee-item">Озеленение <span class="dot"></span></span>
+            <span class="marquee-item">Системы полива <span class="dot"></span></span>
+            <span class="marquee-item">Мощение и дорожки <span class="dot"></span></span>
+            <span class="marquee-item">Освещение <span class="dot"></span></span>
+            <span class="marquee-item">Уход за садом <span class="dot"></span></span>
+            <span class="marquee-item">Ландшафтный дизайн <span class="dot"></span></span>
+            <span class="marquee-item">Озеленение <span class="dot"></span></span>
+            <span class="marquee-item">Системы полива <span class="dot"></span></span>
+            <span class="marquee-item">Мощение и дорожки <span class="dot"></span></span>
+            <span class="marquee-item">Освещение <span class="dot"></span></span>
+            <span class="marquee-item">Уход за садом <span class="dot"></span></span>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+        <div class="about-grid">
+            <div class="about-visual reveal">
+                <div class="about-visual-inner">
+                    <svg viewBox="0 0 100 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M50 10 C30 25, 15 50, 20 75 C25 95, 45 105, 50 110 C55 105, 75 95, 80 75 C85 50, 70 25, 50 10Z" stroke="white" stroke-width="0.5" fill="none"/>
+                        <path d="M50 30 C40 40, 30 55, 35 72 C38 82, 47 88, 50 90 C53 88, 62 82, 65 72 C70 55, 60 40, 50 30Z" stroke="white" stroke-width="0.5" fill="none"/>
+                        <line x1="50" y1="10" x2="50" y2="110" stroke="white" stroke-width="0.3"/>
+                    </svg>
+                    <div class="about-stat">
+                        <div class="stat-item reveal">
+                            <div class="stat-number">12+</div>
+                            <div class="stat-label">лет опыта</div>
+                        </div>
+                        <div class="stat-item reveal">
+                            <div class="stat-number">280</div>
+                            <div class="stat-label">проектов</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p class="section-label reveal">О компании</p>
+                <h2 class="section-title reveal">Пространства, <br>которые дышат</h2>
+                <p class="section-text reveal">
+                    FloraPark — это команда ландшафтных архитекторов, дендрологов и инженеров, которые создают живые пространства. Мы проектируем сады, парки и территории, где каждая деталь продумана — от корневой системы до светового сценария.
+                </p>
+                <p class="section-text reveal" style="margin-top: 1.5rem;">
+                    Наш подход строится на балансе между эстетикой и экологией. Мы работаем с природой, а не против неё.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section services" id="services">
+        <div class="services-header">
+            <p class="section-label reveal">Услуги</p>
+            <h2 class="section-title reveal">Полный цикл<br>благоустройства</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-index">01</div>
+                <h3 class="service-name">Ландшафтный дизайн</h3>
+                <p class="service-desc">Концепция, генплан, дендроплан, 3D-визуализация. Создаём проекты, которые учитывают климат, почву и ваш образ жизни.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-index">02</div>
+                <h3 class="service-name">Озеленение</h3>
+                <p class="service-desc">Подбор растений, посадка крупномеров, устройство газонов, цветников и живых изгородей с гарантией приживаемости.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-index">03</div>
+                <h3 class="service-name">Инженерные системы</h3>
+                <p class="service-desc">Автоматический полив, дренаж, ливневая канализация, садовое освещение — интегрированные в ландшафт.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-index">04</div>
+                <h3 class="service-name">Мощение и конструкции</h3>
+                <p class="service-desc">Дорожки, патио, подпорные стенки, перголы, беседки. Натуральный камень, дерево, современные материалы.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-index">05</div>
+                <h3 class="service-name">Водные объекты</h3>
+                <p class="service-desc">Декоративные пруды, фонтаны, ручьи и каскады. От проектирования до монтажа оборудования и биофильтрации.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-index">06</div>
+                <h3 class="service-name">Уход за садом</h3>
+                <p class="service-desc">Сезонное обслуживание, стрижка, обработка, консервация на зиму. Абонентское сопровождение круглый год.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section process">
+        <div class="process-container">
+            <div class="process-header">
+                <p class="section-label reveal">Как мы работаем</p>
+                <h2 class="section-title reveal">От идеи<br>до живого сада</h2>
+                <p class="section-text reveal">Каждый проект проходит четыре этапа. Прозрачно, в сроки, с вниманием к каждой детали.</p>
+            </div>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-dot"></div>
+                    <div class="step-number">01</div>
+                    <h3 class="step-title">Встреча и бриф</h3>
+                    <p class="step-desc">Выезжаем на участок, изучаем почву и рельеф, обсуждаем ваши пожелания и бюджет.</p>
+                </div>
+                <div class="step">
+                    <div class="step-dot"></div>
+                    <div class="step-number">02</div>
+                    <h3 class="step-title">Проектирование</h3>
+                    <p class="step-desc">Разрабатываем концепцию, генплан, подбираем растения, создаём 3D-визуализацию.</p>
+                </div>
+                <div class="step">
+                    <div class="step-dot"></div>
+                    <div class="step-number">03</div>
+                    <h3 class="step-title">Реализация</h3>
+                    <p class="step-desc">Подготовка территории, инженерные работы, посадка, мощение, установка оборудования.</p>
+                </div>
+                <div class="step">
+                    <div class="step-dot"></div>
+                    <div class="step-number">04</div>
+                    <h3 class="step-title">Сопровождение</h3>
+                    <p class="step-desc">Гарантийный уход, сезонное обслуживание, консультации по развитию сада.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="section portfolio" id="portfolio">
+        <div class="portfolio-header">
+            <div>
+                <p class="section-label reveal">Проекты</p>
+                <h2 class="section-title reveal">Избранные работы</h2>
+            </div>
+        </div>
+        <div class="portfolio-grid">
+            <a class="portfolio-item" href="#" data-project="0">
+                <div class="portfolio-img p1"></div>
+                <div class="portfolio-item-overlay"></div>
+                <div class="portfolio-item-info">
+                    <div class="portfolio-item-title">Резиденция в Дроздах</div>
+                    <div class="portfolio-item-cat">Ландшафтный дизайн</div>
+                </div>
+            </a>
+            <a class="portfolio-item" href="#" data-project="1">
+                <div class="portfolio-img p2"></div>
+                <div class="portfolio-item-overlay"></div>
+                <div class="portfolio-item-info">
+                    <div class="portfolio-item-title">Парк «Зелёная миля»</div>
+                    <div class="portfolio-item-cat">Общественное пространство</div>
+                </div>
+            </a>
+            <a class="portfolio-item" href="#" data-project="2">
+                <div class="portfolio-img p3"></div>
+                <div class="portfolio-item-overlay"></div>
+                <div class="portfolio-item-info">
+                    <div class="portfolio-item-title">Сад на крыше</div>
+                    <div class="portfolio-item-cat">Озеленение</div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- PROJECT MODAL -->
+    <div class="project-modal" id="projectModal">
+        <div class="project-modal-backdrop" id="modalBackdrop"></div>
+        <div class="project-modal-content">
+            <button class="project-modal-close" id="modalClose">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+            <div class="slider" id="projectSlider">
+                <div class="slider-track" id="sliderTrack"></div>
+                <div class="slider-controls">
+                    <button class="slider-btn" id="sliderPrev">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                    </button>
+                    <div class="slider-dots" id="sliderDots"></div>
+                    <button class="slider-btn" id="sliderNext">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 6 15 12 9 18"/></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="project-modal-body">
+                <h2 class="project-modal-title" id="modalTitle"></h2>
+                <p class="project-modal-cat" id="modalCat"></p>
+                <p class="project-modal-desc" id="modalDesc"></p>
+                <div class="project-meta">
+                    <div class="project-meta-item">
+                        <div class="project-meta-label">Площадь</div>
+                        <div class="project-meta-value" id="modalArea"></div>
+                    </div>
+                    <div class="project-meta-item">
+                        <div class="project-meta-label">Срок</div>
+                        <div class="project-meta-value" id="modalDuration"></div>
+                    </div>
+                    <div class="project-meta-item">
+                        <div class="project-meta-label">Год</div>
+                        <div class="project-meta-value" id="modalYear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROMO BANNER -->
+    <section class="section promo-banner" style="padding: 0;">
+        <div class="promo-banner-inner">
+            <div class="promo-banner-content">
+                <div class="promo-banner-badge">Акция</div>
+                <h2 class="promo-banner-title">Бесплатный <strong>3D-дизайн</strong><br>вашего участка</h2>
+                <p class="promo-banner-text">Проверьте свой адрес на карте. Если ваш дом попадает в зону акции — мы бесплатно создадим 3D-визуализацию ландшафта.</p>
+                <a href="promo.html" class="promo-banner-link">
+                    <span>Проверить адрес</span>
+                    <span class="arrow">&rarr;</span>
+                </a>
+            </div>
+            <div class="promo-banner-visual">
+                <svg viewBox="0 0 100 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 5 C25 20, 5 50, 15 80 C22 100, 45 112, 50 115 C55 112, 78 100, 85 80 C95 50, 75 20, 50 5Z" stroke="white" stroke-width="0.4" fill="none"/>
+                    <path d="M50 25 C35 35, 20 55, 28 75 C33 88, 47 95, 50 97 C53 95, 67 88, 72 75 C80 55, 65 35, 50 25Z" stroke="white" stroke-width="0.4" fill="none"/>
+                    <line x1="50" y1="5" x2="50" y2="115" stroke="white" stroke-width="0.25"/>
+                </svg>
+                <div class="promo-visual-text">
+                    <div class="promo-visual-big">3D</div>
+                    <div class="promo-visual-sub">Бесплатно</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section" id="contact">
+        <div class="cta-container">
+            <p class="section-label reveal" style="text-align: center;">Начнём</p>
+            <h2 class="section-title reveal" style="text-align: center;">Расскажите о вашем участке</h2>
+            <p class="section-text reveal" style="text-align: center;">
+                Оставьте заявку — мы свяжемся в течение дня, обсудим ваш проект и предложим решение.
+            </p>
+            <button type="button" class="cta-btn reveal" id="openContactForm">
+                <span>Связаться с нами</span>
+                <span class="arrow">&rarr;</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-brand">FloraPark</div>
+                <p class="footer-brand-text">Создаём ландшафты, в которых хочется жить. Проектирование, строительство и уход за садами с 2014 года.</p>
+            </div>
+            <div class="footer-col">
+                <div class="footer-col-title">Навигация</div>
+                <a href="#about">О нас</a>
+                <a href="#services">Услуги</a>
+                <a href="#portfolio">Проекты</a>
+                <a href="#contact">Контакт</a>
+            </div>
+            <div class="footer-col">
+                <div class="footer-col-title">Контакты</div>
+                <a href="mailto:hello@florapark.ru">hello@florapark.by</a>
+                <a href="tel:+74951234567">+375 (29) 669-37-21</a>
+                <a href="#">Минск, Беларусь</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copy">&copy; 2024 FloraPark. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- CONTACT FORM MODAL -->
+    <div class="contact-modal" id="contactModal">
+        <div class="contact-modal-backdrop" id="contactBackdrop"></div>
+        <div class="contact-modal-content">
+            <button class="project-modal-close" id="contactClose">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+            <div class="contact-form-inner">
+                <p class="section-label" style="opacity:1;transform:none;">Заявка</p>
+                <h2 class="contact-form-title">Расскажите о вашем проекте</h2>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="cf-name">Ваше имя</label>
+                        <input type="text" id="cf-name" name="name" required placeholder="Иван Иванов">
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-phone">Телефон</label>
+                        <input type="tel" id="cf-phone" name="phone" required placeholder="+375 (29) 000-00-00">
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-email">Email</label>
+                        <input type="email" id="cf-email" name="email" placeholder="email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-area">Площадь участка (примерно)</label>
+                        <select id="cf-area" name="area">
+                            <option value="" disabled selected>Выберите</option>
+                            <option value="до 6 соток">до 6 соток</option>
+                            <option value="6–15 соток">6–15 соток</option>
+                            <option value="15–30 соток">15–30 соток</option>
+                            <option value="более 30 соток">более 30 соток</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-service">Что вас интересует?</label>
+                        <select id="cf-service" name="service">
+                            <option value="" disabled selected>Выберите услугу</option>
+                            <option value="Ландшафтный дизайн">Ландшафтный дизайн</option>
+                            <option value="Озеленение">Озеленение</option>
+                            <option value="Инженерные системы">Инженерные системы</option>
+                            <option value="Мощение и конструкции">Мощение и конструкции</option>
+                            <option value="Комплексное благоустройство">Комплексное благоустройство</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-message">Расскажите подробнее о проекте</label>
+                        <textarea id="cf-message" name="message" rows="4" placeholder="Опишите ваш участок, пожелания, бюджет..."></textarea>
+                    </div>
+                    <button type="submit" class="cta-btn form-submit-btn" style="opacity:1;transform:none;">
+                        <span>Отправить заявку</span>
+                        <span class="arrow">&rarr;</span>
+                    </button>
+                    <div class="form-status" id="formStatus"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            // ─── PROJECT DATA ───
+            const projects = [
+                {
+                    title: 'Резиденция в Барвихе',
+                    category: 'Ландшафтный дизайн',
+                    description: 'Комплексный проект для частной резиденции площадью 45 соток. Террасированный сад с перепадом высот, система декоративных водоёмов, зона отдыха с перголой и летней кухней. Подобраны крупномерные хвойные и лиственные деревья, создан естественный лесной массив по периметру участка.',
+                    area: '45 соток',
+                    duration: '8 месяцев',
+                    year: '2024',
+                    colors: ['#c8d5c3', '#a8c4a0', '#8db98a', '#6fa872']
+                },
+                {
+                    title: 'Парк «Зелёная миля»',
+                    category: 'Общественное пространство',
+                    description: 'Благоустройство городского парка протяжённостью 1.2 км. Пешеходные аллеи, велодорожки, детские и спортивные площадки, зоны тихого отдыха. Высажено более 200 деревьев и 3000 кустарников. Установлена система автоматического полива и архитектурного освещения.',
+                    area: '3.8 га',
+                    duration: '14 месяцев',
+                    year: '2023',
+                    colors: ['#b5c9be', '#96b5a6', '#7aa18e', '#5e8d76']
+                },
+                {
+                    title: 'Сад на крыше',
+                    category: 'Озеленение',
+                    description: 'Зелёная кровля бизнес-центра класса А. Интенсивное озеленение с газоном, цветниками, декоративными деревьями в кадках. Лаунж-зона для сотрудников с деревянными настилами, встроенными скамейками и системой туманообразования для жарких дней.',
+                    area: '850 м²',
+                    duration: '5 месяцев',
+                    year: '2024',
+                    colors: ['#a8bfb0', '#8eaf9c', '#749f88', '#5a8f74']
+                }
+            ];
+
+            // ─── LOADER ───
+            const loader = document.getElementById('loader');
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    loader.classList.add('hidden');
+                    animateHero();
+                }, 800);
+            });
+
+            // ─── HERO VIDEO (no loop — replay on scroll-back) ───
+            const heroVideo = document.getElementById('heroVideo');
+            let heroWasOut = false;
+
+            const heroObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        heroWasOut = true;
+                    } else if (heroWasOut) {
+                        heroVideo.currentTime = 0;
+                        heroVideo.play();
+                        heroWasOut = false;
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            heroObserver.observe(document.getElementById('hero'));
+
+            // ─── HERO ANIMATION ───
+            function animateHero() {
+                const lines = document.querySelectorAll('.hero-title .line-inner');
+                const tagline = document.querySelector('.hero-tagline');
+                const subtitle = document.querySelector('.hero-subtitle');
+                const cta = document.querySelector('.hero-cta');
+                const scroll = document.getElementById('heroScroll');
+
+                lines.forEach((line, i) => {
+                    setTimeout(() => {
+                        line.style.transition = 'opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1)';
+                        line.style.opacity = '1';
+                        line.style.transform = 'translateY(0)';
+                    }, 200 + i * 150);
+                });
+
+                setTimeout(() => {
+                    tagline.style.transition = 'opacity 0.8s, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1)';
+                    tagline.style.opacity = '1';
+                    tagline.style.transform = 'translateY(0)';
+                }, 100);
+
+                setTimeout(() => {
+                    subtitle.style.transition = 'opacity 0.8s, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1)';
+                    subtitle.style.opacity = '1';
+                    subtitle.style.transform = 'translateY(0)';
+                }, 900);
+
+                setTimeout(() => {
+                    cta.style.transition = 'opacity 0.8s, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1)';
+                    cta.style.opacity = '1';
+                    cta.style.transform = 'translateY(0)';
+                }, 1100);
+
+                setTimeout(() => {
+                    scroll.style.transition = 'opacity 0.8s';
+                    scroll.style.opacity = '1';
+                }, 1400);
+            }
+
+            // ─── SCROLL REVEAL ───
+            const revealElements = document.querySelectorAll('.reveal, .section-label, .section-title, .section-text, .service-card, .portfolio-item, .testimonial-quote, .testimonial-author, .cta-btn, .step, .promo-banner-badge, .promo-banner-title, .promo-banner-text, .promo-banner-link');
+
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const el = entry.target;
+                        const siblings = Array.from(el.parentElement.children).filter(c =>
+                            Array.from(revealElements).includes(c)
+                        );
+                        const staggerIndex = siblings.indexOf(el);
+                        const delay = Math.max(0, staggerIndex) * 100;
+
+                        setTimeout(() => {
+                            el.style.transition = 'opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1)';
+                            el.style.opacity = '1';
+                            el.style.transform = 'translateY(0)';
+                        }, delay);
+
+                        revealObserver.unobserve(el);
+                    }
+                });
+            }, {
+                threshold: 0.15,
+                rootMargin: '0px 0px -60px 0px'
+            });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            // ─── NAV SCROLL ───
+            const nav = document.getElementById('nav');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 80) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+            }, { passive: true });
+
+            // ─── CURSOR FOLLOWER ───
+            const cursor = document.getElementById('cursor');
+            let cursorX = 0, cursorY = 0;
+            let currentX = 0, currentY = 0;
+
+            document.addEventListener('mousemove', (e) => {
+                cursorX = e.clientX;
+                cursorY = e.clientY;
+                cursor.classList.add('visible');
+            });
+
+            document.addEventListener('mouseleave', () => {
+                cursor.classList.remove('visible');
+            });
+
+            function updateCursor() {
+                currentX += (cursorX - currentX) * 0.12;
+                currentY += (cursorY - currentY) * 0.12;
+                cursor.style.left = currentX + 'px';
+                cursor.style.top = currentY + 'px';
+                requestAnimationFrame(updateCursor);
+            }
+            updateCursor();
+
+            const hoverTargets = document.querySelectorAll('a, button, .service-card, .portfolio-item');
+            hoverTargets.forEach(el => {
+                el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
+                el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
+            });
+
+            // ─── PARALLAX VIDEO ───
+            window.addEventListener('scroll', () => {
+                const scrollY = window.scrollY;
+                const heroHeight = window.innerHeight;
+                if (scrollY < heroHeight) {
+                    const translateY = scrollY * 0.3;
+                    const scale = 1 + scrollY * 0.0003;
+                    heroVideo.style.transform = `translateY(${translateY}px) scale(${scale})`;
+                }
+            }, { passive: true });
+
+            // ─── SMOOTH ANCHOR ───
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    if (this.dataset.project !== undefined) return;
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+
+            // ─── COUNTER ANIMATION ───
+            const statNumbers = document.querySelectorAll('.stat-number');
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const el = entry.target;
+                        const text = el.textContent;
+                        const numMatch = text.match(/(\d+)/);
+                        if (numMatch) {
+                            const target = parseInt(numMatch[1]);
+                            const suffix = text.replace(numMatch[1], '');
+                            let current = 0;
+                            const step = target / 40;
+                            const timer = setInterval(() => {
+                                current += step;
+                                if (current >= target) {
+                                    current = target;
+                                    clearInterval(timer);
+                                }
+                                el.textContent = Math.floor(current) + suffix;
+                            }, 30);
+                        }
+                        counterObserver.unobserve(el);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            statNumbers.forEach(el => counterObserver.observe(el));
+
+            // ─── PROJECT MODAL & SLIDER ───
+            const modal = document.getElementById('projectModal');
+            const modalBackdrop = document.getElementById('modalBackdrop');
+            const modalClose = document.getElementById('modalClose');
+            const sliderTrack = document.getElementById('sliderTrack');
+            const sliderDots = document.getElementById('sliderDots');
+            const sliderPrev = document.getElementById('sliderPrev');
+            const sliderNext = document.getElementById('sliderNext');
+            let currentSlide = 0;
+            let slideCount = 0;
+
+            function openProject(index) {
+                const project = projects[index];
+                document.getElementById('modalTitle').textContent = project.title;
+                document.getElementById('modalCat').textContent = project.category;
+                document.getElementById('modalDesc').textContent = project.description;
+                document.getElementById('modalArea').textContent = project.area;
+                document.getElementById('modalDuration').textContent = project.duration;
+                document.getElementById('modalYear').textContent = project.year;
+
+                sliderTrack.innerHTML = '';
+                sliderDots.innerHTML = '';
+                currentSlide = 0;
+                slideCount = project.colors.length;
+
+                project.colors.forEach((color, i) => {
+                    const slide = document.createElement('div');
+                    slide.className = 'slider-slide';
+                    slide.style.background = color;
+                    sliderTrack.appendChild(slide);
+
+                    const dot = document.createElement('button');
+                    dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
+                    dot.addEventListener('click', () => goToSlide(i));
+                    sliderDots.appendChild(dot);
+                });
+
+                updateSlider();
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeModal() {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            function goToSlide(i) {
+                currentSlide = i;
+                updateSlider();
+            }
+
+            function updateSlider() {
+                sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+                const dots = sliderDots.querySelectorAll('.slider-dot');
+                dots.forEach((d, i) => d.classList.toggle('active', i === currentSlide));
+            }
+
+            sliderPrev.addEventListener('click', () => {
+                currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+                updateSlider();
+            });
+
+            sliderNext.addEventListener('click', () => {
+                currentSlide = (currentSlide + 1) % slideCount;
+                updateSlider();
+            });
+
+            document.querySelectorAll('[data-project]').forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openProject(parseInt(item.dataset.project));
+                });
+            });
+
+            modalBackdrop.addEventListener('click', closeModal);
+            modalClose.addEventListener('click', closeModal);
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    closeModal();
+                    closeContactModal();
+                }
+                if (modal.classList.contains('active')) {
+                    if (e.key === 'ArrowLeft') {
+                        currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+                        updateSlider();
+                    }
+                    if (e.key === 'ArrowRight') {
+                        currentSlide = (currentSlide + 1) % slideCount;
+                        updateSlider();
+                    }
+                }
+            });
+
+            // ─── CONTACT FORM MODAL ───
+            const contactModal = document.getElementById('contactModal');
+            const contactBackdrop = document.getElementById('contactBackdrop');
+            const contactCloseBtn = document.getElementById('contactClose');
+            const openContactBtn = document.getElementById('openContactForm');
+            const contactForm = document.getElementById('contactForm');
+            const formStatus = document.getElementById('formStatus');
+
+            function openContactModal() {
+                contactModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeContactModal() {
+                contactModal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            openContactBtn.addEventListener('click', openContactModal);
+            contactBackdrop.addEventListener('click', closeContactModal);
+            contactCloseBtn.addEventListener('click', closeContactModal);
+
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const data = Object.fromEntries(new FormData(contactForm));
+                data.source = 'main';
+                formStatus.textContent = 'Отправка...';
+                formStatus.className = 'form-status sending';
+                try {
+                    const res = await fetch('/api/submit', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(data)
+                    });
+                    if (res.ok) {
+                        formStatus.textContent = 'Заявка отправлена! Мы свяжемся с вами в ближайшее время.';
+                        formStatus.className = 'form-status success';
+                        contactForm.reset();
+                        setTimeout(closeContactModal, 2500);
+                    } else {
+                        throw new Error('Server error');
+                    }
+                } catch (err) {
+                    formStatus.textContent = 'Ошибка отправки. Попробуйте позже.';
+                    formStatus.className = 'form-status error';
+                }
+            });
+
+        })();
+    </script>
+
+</body>
+</html>
