@@ -205,6 +205,13 @@
                 el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
             });
 
+            // Hide cursor over map (iframe captures mouse events)
+            const mapWrapper = document.querySelector('.map-wrapper');
+            if (mapWrapper) {
+                mapWrapper.addEventListener('mouseenter', () => cursor.classList.remove('visible'));
+                mapWrapper.addEventListener('mouseleave', () => cursor.classList.add('visible'));
+            }
+
             // ─── CONTACT FORM MODAL ───
             const contactModal = document.getElementById('contactModal');
             const contactBackdrop = document.getElementById('contactBackdrop');
