@@ -33,7 +33,7 @@
     <!-- HERO -->
     <section class="hero" id="hero">
         <video class="hero-video" id="heroVideo" autoplay muted playsinline>
-            <source src="hf_20260502_134257_def7bd34-78b7-4537-81c4-fd2f0a44be31.mp4" type="video/mp4">
+            <source src="assets/hf_20260502_134257_def7bd34-78b7-4537-81c4-fd2f0a44be31.mp4" type="video/mp4">
         </video>
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -195,27 +195,27 @@
         </div>
         <div class="portfolio-grid">
             <a class="portfolio-item" href="#" data-project="0">
-                <div class="portfolio-img p1"></div>
+                <img class="portfolio-img" src="assets/project1/IMG-1fe3222fe48ce6502db480acafbde8d5-V.jpg" alt="Резиденция в Раубичах">
                 <div class="portfolio-item-overlay"></div>
                 <div class="portfolio-item-info">
-                    <div class="portfolio-item-title">Резиденция в Дроздах</div>
-                    <div class="portfolio-item-cat">Ландшафтный дизайн</div>
+                    <div class="portfolio-item-title">Резиденция в Раубичах</div>
+                    <div class="portfolio-item-cat">Комплексное благоустройство</div>
                 </div>
             </a>
             <a class="portfolio-item" href="#" data-project="1">
-                <div class="portfolio-img p2"></div>
+                <img class="portfolio-img" src="assets/project2/IMAGE 2026-03-19 15_31_08.jpg" alt="Частный дом на Филимонова">
                 <div class="portfolio-item-overlay"></div>
                 <div class="portfolio-item-info">
-                    <div class="portfolio-item-title">Парк «Зелёная миля»</div>
-                    <div class="portfolio-item-cat">Общественное пространство</div>
+                    <div class="portfolio-item-title">Частный дом на Филимонова</div>
+                    <div class="portfolio-item-cat">Благоустройство</div>
                 </div>
             </a>
             <a class="portfolio-item" href="#" data-project="2">
-                <div class="portfolio-img p3"></div>
+                <img class="portfolio-img" src="assets/project3/IMAGE 2026-03-19 16_36_45.jpg" alt="Декоративная стрижка граба">
                 <div class="portfolio-item-overlay"></div>
                 <div class="portfolio-item-info">
-                    <div class="portfolio-item-title">Сад на крыше</div>
-                    <div class="portfolio-item-cat">Озеленение</div>
+                    <div class="portfolio-item-title">Декоративная стрижка граба</div>
+                    <div class="portfolio-item-cat">Формирование кроны</div>
                 </div>
             </a>
         </div>
@@ -398,31 +398,52 @@
             // ─── PROJECT DATA ───
             const projects = [
                 {
-                    title: 'Резиденция в Барвихе',
-                    category: 'Ландшафтный дизайн',
-                    description: 'Комплексный проект для частной резиденции площадью 45 соток. Террасированный сад с перепадом высот, система декоративных водоёмов, зона отдыха с перголой и летней кухней. Подобраны крупномерные хвойные и лиственные деревья, создан естественный лесной массив по периметру участка.',
-                    area: '45 соток',
-                    duration: '8 месяцев',
-                    year: '2024',
-                    colors: ['#c8d5c3', '#a8c4a0', '#8db98a', '#6fa872']
+                    title: 'Резиденция в Раубичах',
+                    category: 'Комплексное благоустройство',
+                    description: 'Комплексный проект благоустройства частной резиденции площадью 3,1 га. На территории размещены несколько жилых строений, спортивный комплекс, банный комплекс на берегу озера, зона отдыха с перголой и летней кухней, а также плодовый сад. Для формирования выразительного ландшафта подобран ассортимент крупномерных хвойных и лиственных деревьев в соответствии с архитектурой объекта и предпочтениями владельцев.',
+                    area: '3.1 га',
+                    duration: '',
+                    year: '',
+                    images: [
+                        'assets/project1/IMG-1fe3222fe48ce6502db480acafbde8d5-V.jpg',
+                        'assets/project1/IMG-291f5c07ef932a56d3146bd6127d2b55-V.jpg',
+                        'assets/project1/IMG-2b69dac090ede59145689ed6feb83d38-V.jpg',
+                        'assets/project1/IMG-958d28df533105cd855d858e65ac1337-V.jpg',
+                        'assets/project1/IMG-a15bf0a4f7709cd29aac70a3d05692be-V.jpg',
+                        'assets/project1/IMG-b99513111dabf22ab74544aced3f5234-V.jpg',
+                        'assets/project1/IMG-bcce289021f77a7db76959e2688948e0-V.jpg'
+                    ]
                 },
                 {
-                    title: 'Парк «Зелёная миля»',
-                    category: 'Общественное пространство',
-                    description: 'Благоустройство городского парка протяжённостью 1.2 км. Пешеходные аллеи, велодорожки, детские и спортивные площадки, зоны тихого отдыха. Высажено более 200 деревьев и 3000 кустарников. Установлена система автоматического полива и архитектурного освещения.',
-                    area: '3.8 га',
-                    duration: '14 месяцев',
-                    year: '2023',
-                    colors: ['#b5c9be', '#96b5a6', '#7aa18e', '#5e8d76']
+                    title: 'Частный дом на Филимонова',
+                    category: 'Благоустройство',
+                    description: 'Проект благоустройства частного участка, в котором особое внимание уделено сочетанию природной зелени и выразительных каменных элементов. По периметру территории сформирована живая изгородь из туй высотой до 3–4 метров, создающая приватность и завершённость пространства. Центральными акцентами стали беседка, декоративный мостик, садовые вазы и пергола с зоной барбекю.',
+                    area: '',
+                    duration: '',
+                    year: '',
+                    images: [
+                        'assets/project2/IMAGE 2026-03-19 15_31_08.jpg',
+                        'assets/project2/IMAGE 2026-03-19 15_31_19.jpg',
+                        'assets/project2/IMAGE 2026-03-19 15_31_29.jpg',
+                        'assets/project2/IMAGE 2026-03-19 15_31_41.jpg',
+                        'assets/project2/IMAGE 2026-03-19 15_32_56.jpg',
+                        'assets/project2/IMAGE 2026-03-19 15_33_20.jpg',
+                        'assets/project2/IMAGE 2026-03-19 15_33_47.jpg',
+                        'assets/project2/IMAGE 2026-03-19 15_34_04.jpg'
+                    ]
                 },
                 {
-                    title: 'Сад на крыше',
-                    category: 'Озеленение',
-                    description: 'Зелёная кровля бизнес-центра класса А. Интенсивное озеленение с газоном, цветниками, декоративными деревьями в кадках. Лаунж-зона для сотрудников с деревянными настилами, встроенными скамейками и системой туманообразования для жарких дней.',
-                    area: '850 м²',
-                    duration: '5 месяцев',
-                    year: '2024',
-                    colors: ['#a8bfb0', '#8eaf9c', '#749f88', '#5a8f74']
+                    title: 'Декоративная стрижка граба',
+                    category: 'Формирование кроны',
+                    description: 'Работа по формированию и художественной стрижке граба высотой 7–8 метров. По запросу заказчика была создана чёткая архитектурная форма кроны, подчёркивающая статусность участка и усиливающая композицию сада. В результате дерево приобрело выразительный и ухоженный вид, сохранив при этом естественную красоту и здоровье.',
+                    area: '',
+                    duration: '',
+                    year: '',
+                    images: [
+                        'assets/project3/IMAGE 2026-03-19 16_36_45.jpg',
+                        'assets/project3/IMAGE 2026-03-19 16_37_04.jpg',
+                        'assets/project3/IMAGE 2026-03-19 16_38_31.jpg'
+                    ]
                 }
             ];
 
@@ -631,19 +652,31 @@
                 document.getElementById('modalTitle').textContent = project.title;
                 document.getElementById('modalCat').textContent = project.category;
                 document.getElementById('modalDesc').textContent = project.description;
+
+                // Show/hide meta fields based on data
+                const metaItems = document.querySelectorAll('.project-meta-item');
                 document.getElementById('modalArea').textContent = project.area;
                 document.getElementById('modalDuration').textContent = project.duration;
                 document.getElementById('modalYear').textContent = project.year;
+                metaItems[0].style.display = project.area ? '' : 'none';
+                metaItems[1].style.display = project.duration ? '' : 'none';
+                metaItems[2].style.display = project.year ? '' : 'none';
+                const anyMeta = project.area || project.duration || project.year;
+                document.querySelector('.project-meta').style.display = anyMeta ? '' : 'none';
 
                 sliderTrack.innerHTML = '';
                 sliderDots.innerHTML = '';
                 currentSlide = 0;
-                slideCount = project.colors.length;
+                slideCount = project.images.length;
 
-                project.colors.forEach((color, i) => {
+                project.images.forEach((src, i) => {
                     const slide = document.createElement('div');
                     slide.className = 'slider-slide';
-                    slide.style.background = color;
+                    const img = document.createElement('img');
+                    img.className = 'slider-slide-img';
+                    img.src = src;
+                    img.alt = project.title;
+                    slide.appendChild(img);
                     sliderTrack.appendChild(slide);
 
                     const dot = document.createElement('button');
