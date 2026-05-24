@@ -249,26 +249,13 @@
                 if (e.key === 'Escape') closeContactModal();
             });
 
-            const TG_TOKEN = '8680421460:AAHtlVnYHcDXg340tC4BwwwfvpQQuqASMGg';
-            const TG_CHAT = '471574431';
+            const WORKER_URL = 'https://plain-recipe-4a2d.a1exey-amaz.workers.dev/';
 
             async function sendToTelegram(data) {
-                const lines = ['📩 *Новая заявка с сайта*', ''];
-                if (data.name)    lines.push(`👤 *Имя:* ${data.name}`);
-                if (data.phone)   lines.push(`📞 *Телефон:* ${data.phone}`);
-                if (data.email)   lines.push(`✉️ *Email:* ${data.email}`);
-                if (data.address) lines.push(`📍 *Адрес:* ${data.address}`);
-                if (data.message) lines.push(`\n💬 *Сообщение:*\n${data.message}`);
-                lines.push(`\n🏷 *Источник:* Страница акции`);
-
-                const res = await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
+                const res = await fetch(WORKER_URL, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        chat_id: TG_CHAT,
-                        text: lines.join('\n'),
-                        parse_mode: 'Markdown'
-                    })
+                    body: JSON.stringify(data)
                 });
                 return res.ok;
             }
