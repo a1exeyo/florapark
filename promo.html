@@ -21,6 +21,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
 
@@ -150,12 +151,20 @@
                         <label for="cf-message">Комментарий</label>
                         <textarea id="cf-message" name="message" rows="3" placeholder="Расскажите о вашем участке..."></textarea>
                     </div>
+                    <div class="cf-turnstile" data-sitekey="0x4AAAAAADVjjbU4wZHgP-T7" data-theme="light"></div>
                     <button type="submit" class="cta-btn form-submit-btn" style="opacity:1;transform:none;">
                         <span>Отправить заявку</span>
                         <span class="arrow">&rarr;</span>
                     </button>
                     <div class="form-status" id="formStatus"></div>
                 </form>
+                <div class="form-success" id="formSuccess">
+                    <div class="form-success-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    </div>
+                    <h3>Заявка отправлена!</h3>
+                    <p>Мы свяжемся с вами в ближайшее время</p>
+                </div>
             </div>
         </div>
     </div>
@@ -260,21 +269,36 @@
                 return res.ok;
             }
 
+            const formSuccess = document.getElementById('formSuccess');
+
             contactForm.addEventListener('submit', async (e) => {
                 e.preventDefault();
                 const data = Object.fromEntries(new FormData(contactForm));
                 data.source = 'promo';
+                const turnstileToken = document.querySelector('[name="cf-turnstile-response"]')?.value;
+                if (!turnstileToken) {
+                    formStatus.textContent = 'Пожалуйста, пройдите проверку.';
+                    formStatus.className = 'form-status error';
+                    return;
+                }
+                data.token = turnstileToken;
                 formStatus.textContent = 'Отправка...';
                 formStatus.className = 'form-status sending';
                 try {
                     const ok = await sendToTelegram(data);
                     if (ok) {
-                        formStatus.textContent = 'Заявка отправлена! Мы свяжемся с вами в ближайшее время.';
-                        formStatus.className = 'form-status success';
+                        contactForm.style.display = 'none';
+                        formSuccess.classList.add('visible');
                         contactForm.reset();
-                        setTimeout(closeContactModal, 2500);
+                        if (window.turnstile) turnstile.reset();
+                        setTimeout(() => {
+                            closeContactModal();
+                            contactForm.style.display = '';
+                            formSuccess.classList.remove('visible');
+                            formStatus.textContent = '';
+                        }, 3000);
                     } else {
-                        throw new Error('Telegram error');
+                        throw new Error('Error');
                     }
                 } catch (err) {
                     formStatus.textContent = 'Ошибка отправки. Попробуйте позже.';
