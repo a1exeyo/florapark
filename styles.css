@@ -1481,6 +1481,18 @@ body {
     min-height: 720px;
 }
 
+.map-mobile {
+    display: none;
+}
+
+@media (max-width: 640px) {
+    .map-desktop { display: none; }
+    .map-mobile {
+        display: block;
+        min-height: 500px;
+    }
+}
+
 /* promo cta */
 .promo-cta {
     padding: 5rem 3rem;
