@@ -848,9 +848,12 @@
 
             const formSuccess = document.getElementById('formSuccess');
 
+            document.querySelector('.form-submit-btn').addEventListener('click', () => {
+                if (typeof fbq === 'function') fbq('track', 'Lead');
+            });
+
             contactForm.addEventListener('submit', async (e) => {
                 e.preventDefault();
-                if (typeof fbq === 'function') fbq('track', 'Lead');
                 const data = Object.fromEntries(new FormData(contactForm));
                 data.source = 'main';
                 const turnstileToken = document.querySelector('[name="cf-turnstile-response"]')?.value;
