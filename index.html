@@ -850,6 +850,7 @@
 
             contactForm.addEventListener('submit', async (e) => {
                 e.preventDefault();
+                if (typeof fbq === 'function') fbq('track', 'Lead');
                 const data = Object.fromEntries(new FormData(contactForm));
                 data.source = 'main';
                 const turnstileToken = document.querySelector('[name="cf-turnstile-response"]')?.value;
@@ -864,7 +865,6 @@
                 try {
                     const ok = await sendToTelegram(data);
                     if (ok) {
-                        if (typeof fbq === 'function') fbq('track', 'Lead');
                         contactForm.style.display = 'none';
                         formSuccess.classList.add('visible');
                         contactForm.reset();
