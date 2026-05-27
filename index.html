@@ -864,6 +864,7 @@
                 try {
                     const ok = await sendToTelegram(data);
                     if (ok) {
+                        if (typeof fbq === 'function') fbq('track', 'Lead');
                         contactForm.style.display = 'none';
                         formSuccess.classList.add('visible');
                         contactForm.reset();
