@@ -172,7 +172,6 @@
                         <label for="cf-message">Комментарий</label>
                         <textarea id="cf-message" name="message" rows="3" placeholder="Расскажите о вашем участке..."></textarea>
                     </div>
-                    <div class="cf-turnstile" data-sitekey="0x4AAAAAADVjjbU4wZHgP-T7" data-theme="light"></div>
                     <button type="submit" class="cta-btn form-submit-btn" style="opacity:1;transform:none;">
                         <span>Отправить заявку</span>
                         <span class="arrow">&rarr;</span>
@@ -300,13 +299,6 @@
                 e.preventDefault();
                 const data = Object.fromEntries(new FormData(contactForm));
                 data.source = 'promo';
-                const turnstileToken = document.querySelector('[name="cf-turnstile-response"]')?.value;
-                if (!turnstileToken) {
-                    formStatus.textContent = 'Пожалуйста, пройдите проверку.';
-                    formStatus.className = 'form-status error';
-                    return;
-                }
-                data.token = turnstileToken;
                 formStatus.textContent = 'Отправка...';
                 formStatus.className = 'form-status sending';
                 try {
@@ -315,7 +307,6 @@
                         contactForm.style.display = 'none';
                         formSuccess.classList.add('visible');
                         contactForm.reset();
-                        if (window.turnstile) turnstile.reset();
                         setTimeout(() => {
                             closeContactModal();
                             contactForm.style.display = '';
