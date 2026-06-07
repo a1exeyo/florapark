@@ -1765,6 +1765,29 @@ body {
 }
 
 /* Turnstile widget */
+.consent-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-family: var(--font);
+    font-size: 0.82rem;
+    color: #666;
+    cursor: pointer;
+    margin-top: 0.25rem;
+}
+
+.consent-check input[type="checkbox"] {
+    margin-top: 0.2rem;
+    accent-color: var(--green);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.consent-check a {
+    color: var(--green);
+    text-decoration: underline;
+}
+
 .cf-turnstile {
     margin-top: 0.25rem;
 }
