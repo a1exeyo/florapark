@@ -871,7 +871,8 @@ body {
     gap: 1.5rem;
 }
 
-.footer-links a {
+.footer-links a,
+.footer-links a:visited {
     font-family: var(--font);
     font-size: 0.75rem;
     font-weight: 300;
