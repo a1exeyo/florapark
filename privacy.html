@@ -60,9 +60,18 @@
         <a href="index.html" class="nav-logo">FloraPark</a>
         <a href="index.html" class="nav-back">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
-            На главную
+            Назад
         </a>
     </nav>
+    <script>
+    (function() {
+        var back = document.querySelector('.nav-back');
+        var ref = document.referrer;
+        if (ref && ref.indexOf('promo') !== -1) {
+            back.href = 'promo.html';
+        }
+    })();
+    </script>
 
     <div class="privacy-page">
         <h1>Политика в отношении обработки персональных данных</h1>
